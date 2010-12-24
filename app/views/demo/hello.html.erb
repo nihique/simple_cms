@@ -1,0 +1,34 @@
+<h1>Demo#hello</h1>
+<p>Find me in app/views/demo/hello.html.erb</p>
+
+<h2>Important</h2>
+<ul>
+    <li><strong>Id</strong>: <%= @id %></li>
+    <li><strong>Page</strong>: <%= @page %></li>
+    <li><strong>Next page</strong>: <%= @page + 1 %></li>
+</ul>
+
+<h2>Other</h2>
+
+<h3>Listing params</h3>
+<ul>
+  <% params.each do |key, val| %>
+    <li><strong><%= key %></strong>: <%= val %></li>
+  <% end %>
+</ul>
+
+<h3>Going through array instance variable</h3>
+<ul>
+  <% @array.each do |n| %>
+    <li><%= n %></li>
+  <% end %>
+</ul>
+
+<h2>Links</h2>
+
+<ul>
+  <li><%= link_to('Go to the index', {:action => 'index'}) %></li>
+</ul>
+
+<hr />
+Params: <%= params.inspect %>
