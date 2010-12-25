@@ -1,14 +1,16 @@
 class CreateSubjects < ActiveRecord::Migration
   def self.up
     create_table :subjects do |t|
-      t.string 'name', :limit => 50
+      t.string  'name'
       t.integer 'position'
-      t.boolean 'visible', :default => true
+      t.boolean 'visible', :default => false
       t.timestamps
     end
+    add_index :subjects, 'position'
   end
 
   def self.down
-    drop_table :subjects
+    remove_index :subjects, 'position'
+    drop_table   :subjects
   end
 end
