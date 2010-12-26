@@ -8,8 +8,13 @@
 </head>
 <body>
 
-  <p class="notice"><%= notice %></p>
+<% if !alert.blank? %>
   <p class="alert"><%= alert %></p>
+<% end %>
+
+<% if !notice.blank? %>
+  <p class="notice"><%= notice %></p>
+<% end %>
 
 <%= yield %>
 
