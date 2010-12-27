@@ -1,0 +1,3 @@
+<%= link_to 'Roar me!', '#', :onclick => 'jsRoar(); return true;' %>
+<% text = "'); alert('Gotcha!" %>
+<%= javascript_tag "alert('#{escape_javascript(text)}');" %>
